@@ -1,0 +1,76 @@
+mysql> create database samiha;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> use samiha;
+Database changed
+mysql> create table students(name varchar(30),age int,rollnumber int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> insert into students (name,age,rollnumber) values('pooja',23,1);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into students (name,age,rollnumber) values('pavithra',22,2);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students (name,age,rollnumber) values('bheem',22,3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into students (name,age,rollnumber) values('vaishu',23,4);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into students (name,age,rollnumber) values('ishwarya',23,5);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students (name,age,rollnumber) values('samiha',22,6);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students (name,age,rollnumber) values('sai',21,7);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into students (name,age,rollnumber) values('rohan',29,8);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from students;
++----------+------+------------+
+| name     | age  | rollnumber |
++----------+------+------------+
+| pooja    |   23 |          1 |
+| pavithra |   22 |          2 |
+| bheem    |   22 |          3 |
+| vaishu   |   23 |          4 |
+| ishwarya |   23 |          5 |
+| samiha   |   22 |          6 |
+| sai      |   21 |          7 |
+| rohan    |   29 |          8 |
++----------+------+------------+
+8 rows in set (0.00 sec)
+
+mysql> update students set age=21 where rollnumber=8;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from students where age=21;
++------+------+------------+
+| name | age  | rollnumber |
++------+------+------------+
+| sai  |   21 |          7 |
+| rohan  |   21 |          8 |
++------+------+------------+
+2 rows in set (0.00 sec)
+
+mysql> delete from students where age=23;
+Query OK, 3 rows affected (0.00 sec)
+
+mysql> select* from students;
++----------+------+------------+
+| name     | age  | rollnumber |
++----------+------+------------+
+| pavithra |   22 |          2 |
+| bheem    |   22 |          3 |
+| samiha   |   22 |          6 |
+| sai      |   21 |          7 |
+| rohan    |   21 |          8 |
++----------+------+------------+
+5 rows in set (0.00 sec)
+
+mysql>
